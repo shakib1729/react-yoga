@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  box-sizing: border-box;
+  font-size: 82.5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; /*we want our 'header' , then 'main' and then 'footer'*/
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    -225deg,
+    #ff057c 0%,
+    #8d0b93 50%,
+    #321575 100%
+  );
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#home {
+  display: flex;
+  flex-grow: 1;
+}
+
+#secondary {
+  flex: 1 1 0%;
+  order: -1;
+  padding-left: 0.5rem;
+}
+
+#tertiary {
+  flex: 1 1 0%;
+  border-radius: 10px;
+
+  /*background-image: linear-gradient(to top, rgba(161, 140, 209, .5) 0%, rgba(251, 194, 235, .5) 100%);*/
+  background-image: linear-gradient(
+    to right,
+    #b8cbb8 0%,
+    #b8cbb8 0%,
+    #b465da 0%,
+    #cf6cc9 33%,
+    #ee609c 66%,
+    #ee609c 100%
+  );
+}
+
+#content {
+  flex: 4 1 0%;
+  background-image: linear-gradient(
+    to top,
+    rgba(161, 140, 209, 0.5) 0%,
+    rgba(251, 194, 235, 0.5) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgb(71, 71, 71);
+}
+#header,
+#footer {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.link {
+  text-decoration: none;
 }
