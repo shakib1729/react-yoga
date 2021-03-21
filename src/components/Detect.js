@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useGlobalContext } from '../context/globalContext';
 import * as tf from '@tensorflow/tfjs';
 import * as posenet from '@tensorflow-models/posenet';
@@ -7,13 +7,12 @@ import { drawKeypoints, drawSkeleton } from '../utilities/utilities';
 
 const Detect = () => {
   const {
-    poseNetModel,
     model,
     timer,
     currPose,
     scores,
     isDetecting,
-    setPoseNetModel,
+
     setModel,
     setTimer,
     setCurrPose,
@@ -22,7 +21,7 @@ const Detect = () => {
   } = useGlobalContext();
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
-  //   const [, setPoseNetModel] = useState(null);
+  const [poseNetModel, setPoseNetModel] = useState(null);
   //   const [model, setModel] = useState(null);
   //   const [timer, setTimer] = useState(10);
   //   const [currPose, setCurrPose] = useState(0);
@@ -56,7 +55,7 @@ const Detect = () => {
       const loadedModel = await tf.loadLayersModel('/model/my-model.json');
       setModel(loadedModel);
     };
-    loadModels();
+    if (poseNetModel === null && model === null) loadModels();
   }, []);
 
   const runPosenet = () => {
