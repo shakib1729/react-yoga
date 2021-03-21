@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { useGlobalContext } from '../context/globalContext';
 import * as tf from '@tensorflow/tfjs';
 import * as posenet from '@tensorflow-models/posenet';
@@ -6,26 +6,27 @@ import Webcam from 'react-webcam';
 import { drawKeypoints, drawSkeleton } from '../utilities/utilities';
 
 const Detect = () => {
+  const webcamRef = useRef(null);
+  const canvasRef = useRef(null);
   const {
+    poseNetModel,
     model,
     timer,
     currPose,
     scores,
     isDetecting,
-
+    setPoseNetModel,
     setModel,
     setTimer,
     setCurrPose,
     setScores,
     setIsDetecting,
   } = useGlobalContext();
-  const webcamRef = useRef(null);
-  const canvasRef = useRef(null);
-  const [poseNetModel, setPoseNetModel] = useState(null);
-  //   const [model, setModel] = useState(null);
-  //   const [timer, setTimer] = useState(10);
-  //   const [currPose, setCurrPose] = useState(0);
-  //   const [scores, setScores] = useState([0, 0]);
+  // const [poseNetModel, setPoseNetModel] = useState(null);
+  // const [model, setModel] = useState(null);
+  // const [timer, setTimer] = useState(10);
+  // const [currPose, setCurrPose] = useState(0);
+  // const [scores, setScores] = useState([0, 0]);
 
   const timerRef = useRef(timer);
   timerRef.current = timer;
@@ -37,7 +38,7 @@ const Detect = () => {
   scoresRef.current = scores;
 
   const isDetectingRef = useRef(isDetecting);
-  scoresRef.current = isDetecting;
+  isDetectingRef.current = isDetecting;
 
   const intervalRef = useRef(null);
   const timerVarRef = useRef(null);
@@ -55,7 +56,7 @@ const Detect = () => {
       const loadedModel = await tf.loadLayersModel('/model/my-model.json');
       setModel(loadedModel);
     };
-    if (poseNetModel === null && model === null) loadModels();
+    loadModels();
   }, []);
 
   const runPosenet = () => {
@@ -68,7 +69,7 @@ const Detect = () => {
     setTimer(10);
     const timerVar = setInterval(() => {
       setTimer(timerRef.current - 1);
-      if (timerRef.current === 0) {
+      if (timerRef.current == 0) {
         clearInterval(timerVar);
         changeIsDetecting();
       }
@@ -80,7 +81,7 @@ const Detect = () => {
     if (
       typeof webcamRef.current !== 'undefined' &&
       webcamRef.current !== null &&
-      webcamRef.current.video.readyState === 4 &&
+      webcamRef.current.video.readyState == 4 &&
       typeof canvasRef.current !== 'undefined' &&
       canvasRef.current !== null
     ) {
@@ -121,13 +122,13 @@ const Detect = () => {
       ' Current:  ',
       currPoseRef.current
     );
-    if (predictedClass[0] === currPoseRef.current) {
+    if (predictedClass[0] == currPoseRef.current) {
       // We made a correct prediction,
       // so increment the score of current pose
 
       setScores(
         scoresRef.current.map((currScore, idx) => {
-          if (idx === currPoseRef.current) return currScore + 1;
+          if (idx == currPoseRef.current) return currScore + 1;
           else return currScore;
         })
       );
@@ -149,6 +150,7 @@ const Detect = () => {
   };
 
   const resetStates = () => {
+    // isDetectingRef.current = false;
     setIsDetecting(false);
     clearInterval(intervalRef.current);
     clearInterval(timerVarRef.current);
@@ -158,9 +160,10 @@ const Detect = () => {
   const startDetecting = (pose) => {
     setCurrPose(pose);
     setIsDetecting(true);
+    // isDetectingRef.current = true;
     const timerVar = setInterval(() => {
       setTimer(timerRef.current - 1);
-      if (timerRef.current === 0) {
+      if (timerRef.current == 0) {
         clearInterval(timerVar);
         runPosenet();
       }
