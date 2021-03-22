@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useGlobalContext } from '../context/globalContext';
 import * as tf from '@tensorflow/tfjs';
 import * as posenet from '@tensorflow-models/posenet';
@@ -8,6 +8,8 @@ import { drawKeypoints, drawSkeleton } from '../utilities/utilities';
 const Detect = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+  const videoWidth = 426,
+    videoHeight = 240;
   const {
     poseNetModel,
     model,
@@ -47,7 +49,7 @@ const Detect = () => {
     const loadModels = async () => {
       // Load the posenet model
       const loadedPoseNetModel = await posenet.load({
-        inputResolution: { width: 426, height: 240 },
+        inputResolution: { width: videoWidth, height: videoHeight },
         scale: 0.5,
       });
       setPoseNetModel(loadedPoseNetModel);
@@ -177,7 +179,7 @@ const Detect = () => {
   };
 
   return (
-    <div className='App'>
+    <>
       Current Pose: {currPose}
       <button onClick={() => changeIsDetecting(0)}>
         <h4> {isDetecting ? 'Stop detecting' : 'Detect pose 0'} </h4>
@@ -193,9 +195,9 @@ const Detect = () => {
           </li>
         );
       })}
-      <header className='App-header'>
+      <>
         {isDetecting ? (
-          <>
+          <div className='video-container'>
             <Webcam
               ref={webcamRef}
               mirrored
@@ -205,12 +207,12 @@ const Detect = () => {
                 marginRight: 'auto',
                 left: 0,
                 right: 0,
-                textAlign: 'center',
                 zindex: 9,
-                width: 426,
-                height: 240,
+                width: videoWidth,
+                height: videoHeight,
               }}
             />
+
             <canvas
               ref={canvasRef}
               style={{
@@ -219,18 +221,17 @@ const Detect = () => {
                 marginRight: 'auto',
                 left: 0,
                 right: 0,
-                textAlign: 'center',
                 zindex: 9,
-                width: 426,
-                height: 240,
+                width: videoWidth,
+                height: videoHeight,
               }}
             />
-          </>
+          </div>
         ) : (
           <p>Turn On</p>
         )}
-      </header>
-    </div>
+      </>
+    </>
   );
 };
 

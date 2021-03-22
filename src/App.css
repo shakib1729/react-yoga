@@ -3,19 +3,19 @@
   padding: 0;
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 82.5%;
-}
 @media only screen and (max-width: 68.75em) {
   html {
-    font-size: 50%;
+    font-size: 75%;
   }
 }
 
-body {
+/* CSS GRID */
+.container {
+}
+
+/* body {
   display: flex;
-  flex-direction: column; /*we want our 'header' , then 'main' and then 'footer'*/
+  flex-direction: column; 
   min-height: 100vh;
 }
 
@@ -44,7 +44,6 @@ body {
   flex: 1 1 0%;
   border-radius: 10px;
 
-  /*background-image: linear-gradient(to top, rgba(161, 140, 209, .5) 0%, rgba(251, 194, 235, .5) 100%);*/
   background-image: linear-gradient(
     to right,
     #003545 0%,
@@ -71,4 +70,24 @@ body {
 
 .link {
   text-decoration: none;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: 'grid-container-left grid-container-right';
+}
+
+.grid-container-left {
+  grid-area: grid-container-left;
+}
+
+.grid-container-right {
+  grid-area: grid-container-right;
+} */
+
+.video-container {
+  position: relative;
 }
