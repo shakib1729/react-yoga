@@ -9,7 +9,18 @@ export const AppProvider = ({ children }) => {
   const [currPose, setCurrPose] = useState(0);
   const [scores, setScores] = useState([0, 0]);
   const [isDetecting, setIsDetecting] = useState(false);
-
+  const poses = [
+    {
+      id: 0,
+      name: 'Utkatasana',
+      img: '/img/chair-pose.png',
+    },
+    {
+      id: 1,
+      name: 'Vrikshasana',
+      img: '/img/tree-pose.png',
+    },
+  ];
   return (
     <AppContext.Provider
       value={{
@@ -19,6 +30,7 @@ export const AppProvider = ({ children }) => {
         currPose,
         scores,
         isDetecting,
+        poses,
         setPoseNetModel,
         setModel,
         setTimer,
