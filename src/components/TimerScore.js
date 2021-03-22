@@ -18,7 +18,9 @@ const TimerScore = () => {
         })}
       </div>
       <div id='sidebar-poseimg'>
-        <h3>{poses[currPose].name}</h3>
+        <h3>
+          {currPose}: {poses[currPose].name}
+        </h3>
         <img
           className='big-pose-img'
           src={poses[currPose].img}
