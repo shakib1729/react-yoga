@@ -176,7 +176,6 @@ const Detect = () => {
 
   return (
     <>
-      Current Pose: {currPose}
       <button onClick={() => changeIsDetecting()}>
         <h4> {isDetecting ? 'Stop detecting' : 'Start Detecting'} </h4>
       </button>
