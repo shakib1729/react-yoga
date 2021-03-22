@@ -89,6 +89,7 @@ footer {
 
 #sidebar-poseimg {
   background: #18ffff;
+  padding-top: var(--main-padding);
 }
 
 .video-container {
@@ -113,6 +114,9 @@ footer {
 
 li {
   list-style: none;
+}
+
+#sidebar-left li {
   cursor: pointer;
 }
 
@@ -124,4 +128,11 @@ li {
 
 .poselist-name {
   margin-bottom: var(--main-margin);
+}
+
+.big-pose-img {
+  /* border-radius: 50%; */
+  /* justify-content: center; */
+  width: 15rem;
+  height: 20rem;
 }
