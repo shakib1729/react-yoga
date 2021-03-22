@@ -6,7 +6,10 @@ const TimerScore = () => {
 
   return (
     <section id='sidebar-right'>
-      <div id='sidebar-timer'>Timer: {timer}</div>
+      <div id='sidebar-timer'>
+        Timer <br />
+        <h1>{timer}</h1>
+      </div>
       <div id='sidebar-score'>
         Score:{' '}
         {scores.map((score, idx) => {
