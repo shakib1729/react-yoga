@@ -135,4 +135,5 @@ li {
   /* justify-content: center; */
   width: 15rem;
   height: 20rem;
+  transform: scaleX(-1);
 }
