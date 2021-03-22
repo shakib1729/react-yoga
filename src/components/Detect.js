@@ -184,7 +184,6 @@ const Detect = () => {
       <button onClick={() => changeIsDetecting(0)}>
         <h4> {isDetecting ? 'Stop detecting' : 'Detect pose 0'} </h4>
       </button>
-      Timer: {timer}
       <button onClick={() => changeIsDetecting(1)}>
         <h4> {isDetecting ? 'Stop detecting' : 'Detect pose 1'} </h4>
       </button>
