@@ -1,5 +1,5 @@
 :root {
-  --main-radius: 0.3rem;
+  --main-radius: 0rem;
   --main-padding: 1.5rem;
   --main-margin: 1.5rem;
 }
@@ -24,7 +24,7 @@ html {
   height: 100vh;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 0.3fr 1.5fr 1.2fr 0.2fr;
-  grid-gap: 0.2rem;
+  grid-gap: 0.07rem;
   grid-template-areas:
     'header header header header header header'
     'sidebar-left main main main main sidebar-right'
@@ -35,26 +35,33 @@ html {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 1rem;
-  color: #004d40;
+  /* color: #004d40; */
+  color: #bae0e9;
   text-align: center;
+  background: #348ea3;
 }
 
 header {
-  background: #a7ffeb;
+  /* background: #a7ffeb; */
+  background: #030708;
   grid-area: header;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
 main {
-  background: #84ffff;
+  /* background: #84ffff; */
+  /* background: #1f2833; */
+  /* background: #0f292f; */
+  background: #071315;
   grid-area: main;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
 footer {
-  background: #1de9b6;
+  /* background: #1de9b6; */
+  background: #030708;
   grid-area: footer;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
@@ -62,33 +69,42 @@ footer {
 }
 
 #sidebar-left {
-  background: #18ffff;
+  /* background: #18ffff; */
+  background: #030708;
   grid-area: sidebar-left;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
 #sidebar-right {
-  background: #73ffba;
+  /* background: #73ffba; */
+  /* background: #071315; */
   grid-area: sidebar-right;
   border-radius: var(--main-radius);
   /* padding-top: var(--main-padding); */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 4fr;
-  grid-gap: 0.5rem;
+  /* grid-gap: 0.2rem; */
+  grid-gap: 0.08rem;
 }
 
 #sidebar-timer {
-  background: #18ffff;
+  /* background: #18ffff; */
+  /* background: #071315; */
+  background: #030708;
 }
 
 #sidebar-score {
-  background: #18ffff;
+  /* background: #18ffff; */
+  /* background: #071315; */
+  background: #030708;
 }
 
 #sidebar-poseimg {
-  background: #18ffff;
+  /* background: #18ffff; */
+  /* background: #071315; */
+  background: #030708;
   padding-top: var(--main-padding);
 }
 
