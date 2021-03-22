@@ -66,8 +66,10 @@ const Detect = () => {
     setTimer(10);
     const timerVar = setInterval(() => {
       setTimer(timerRef.current - 1);
+      console.log(timerRef.current);
       if (timerRef.current == 0) {
         clearInterval(timerVar);
+        clearInterval(timerVarRef.current);
         changeIsDetecting();
       }
     }, 1000);
@@ -168,7 +170,7 @@ const Detect = () => {
   };
 
   const changeIsDetecting = () => {
-    if (isDetecting) resetStates();
+    if (isDetectingRef.current) resetStates();
     else startDetecting();
   };
 
