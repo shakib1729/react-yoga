@@ -3,7 +3,7 @@ import Detect from './Detect';
 
 const Main = () => {
   return (
-    <section id='main-content'>
+    <main>
       <Detect />
       <br /> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio
       dolores sit laboriosam ex. Vel aperiam minima ullam illum repellendus,
@@ -15,7 +15,7 @@ const Main = () => {
       Veniam consequatur, sequi commodi culpa quibusdam magnam assumenda
       laudantium vero est quos laborum ex nesciunt libero expedita fugiat. Odit
       quae sunt reprehenderit?
-    </section>
+    </main>
   );
 };
 

@@ -5,11 +5,11 @@ import Main from './Main';
 
 const Home = () => {
   return (
-    <main id='home'>
+    <>
       <PoseList />
       <Main />
       <TimerScore />
-    </main>
+    </>
   );
 };
 

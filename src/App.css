@@ -11,6 +11,41 @@
 
 /* CSS GRID */
 .container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 0.5fr 1.5fr 1.2fr 0.2fr;
+  grid-gap: 0.2rem;
+  grid-template-areas:
+    'header header header header header header'
+    'sidebar-left main main main main sidebar-right'
+    'sidebar-left main main main main sidebar-right'
+    'sidebar-left footer footer footer footer sidebar-right';
+}
+
+header {
+  background: #a7ffeb;
+  grid-area: header;
+}
+
+main {
+  background: #84ffff;
+  grid-area: main;
+}
+
+footer {
+  background: #1de9b6;
+  grid-area: footer;
+}
+
+#sidebar-left {
+  background: #18ffff;
+  grid-area: sidebar-left;
+}
+
+#sidebar-right {
+  background: #18ffff;
+  grid-area: sidebar-right;
 }
 
 /* body {
