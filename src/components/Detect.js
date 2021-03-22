@@ -187,13 +187,6 @@ const Detect = () => {
       <button onClick={() => changeIsDetecting(1)}>
         <h4> {isDetecting ? 'Stop detecting' : 'Detect pose 1'} </h4>
       </button>
-      {scores.map((score, idx) => {
-        return (
-          <li key={idx}>
-            Pose {idx}: {score}
-          </li>
-        );
-      })}
       <>
         {isDetecting ? (
           <div className='video-container'>
