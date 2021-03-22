@@ -72,7 +72,23 @@ footer {
   background: #73ffba;
   grid-area: sidebar-right;
   border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
+  /* padding-top: var(--main-padding); */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 4fr;
+  grid-gap: 0.5rem;
+}
+
+#sidebar-timer {
+  background: #18ffff;
+}
+
+#sidebar-score {
+  background: #18ffff;
+}
+
+#sidebar-poseimg {
+  background: #18ffff;
 }
 
 .video-container {
