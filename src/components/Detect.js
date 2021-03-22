@@ -24,11 +24,6 @@ const Detect = () => {
     setScores,
     setIsDetecting,
   } = useGlobalContext();
-  // const [poseNetModel, setPoseNetModel] = useState(null);
-  // const [model, setModel] = useState(null);
-  // const [timer, setTimer] = useState(10);
-  // const [currPose, setCurrPose] = useState(0);
-  // const [scores, setScores] = useState([0, 0]);
 
   const timerRef = useRef(timer);
   timerRef.current = timer;
@@ -159,8 +154,7 @@ const Detect = () => {
     setTimer(10);
   };
 
-  const startDetecting = (pose) => {
-    setCurrPose(pose);
+  const startDetecting = () => {
     setIsDetecting(true);
     // isDetectingRef.current = true;
     const timerVar = setInterval(() => {
@@ -173,19 +167,16 @@ const Detect = () => {
     timerVarRef.current = timerVar;
   };
 
-  const changeIsDetecting = (pose) => {
-    if (isDetectingRef.current) resetStates();
-    else startDetecting(pose);
+  const changeIsDetecting = () => {
+    if (isDetecting) resetStates();
+    else startDetecting();
   };
 
   return (
     <>
       Current Pose: {currPose}
-      <button onClick={() => changeIsDetecting(0)}>
-        <h4> {isDetecting ? 'Stop detecting' : 'Detect pose 0'} </h4>
-      </button>
-      <button onClick={() => changeIsDetecting(1)}>
-        <h4> {isDetecting ? 'Stop detecting' : 'Detect pose 1'} </h4>
+      <button onClick={() => changeIsDetecting()}>
+        <h4> {isDetecting ? 'Stop detecting' : 'Start Detecting'} </h4>
       </button>
       <>
         {isDetecting ? (
