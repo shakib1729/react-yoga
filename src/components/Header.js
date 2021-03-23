@@ -3,7 +3,10 @@ import DarkMode from './DarkMode';
 const Header = () => {
   return (
     <header>
-      Header
+      <h1>ReactYoga</h1>
+      <a href='#!' style={{ background: '#fff' }}>
+        About
+      </a>
       <DarkMode />
     </header>
   );
