@@ -1,6 +1,6 @@
 import React from 'react';
 import PoseList from './PoseList';
-import TimerScore from './TimerScore';
+import SidebarRight from './SidebarRight';
 import Main from './Main';
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <PoseList />
       <Main />
-      <TimerScore />
+      <SidebarRight />
     </>
   );
 };

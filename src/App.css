@@ -1,6 +1,8 @@
 :root {
   --main-radius: 0rem;
   --main-padding: 1.5rem;
+  --small-padding: 0.5rem;
+  --small-margin: 0.5rem;
   --main-margin: 1.5rem;
 }
 
@@ -93,6 +95,7 @@ footer {
   /* background: #18ffff; */
   /* background: #071315; */
   background: #030708;
+  padding-top: var(--small-padding);
 }
 
 #sidebar-score {
@@ -152,4 +155,17 @@ li {
   width: 15rem;
   height: 20rem;
   transform: scaleX(-1);
+}
+
+.circle {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  border-radius: 50%;
+  text-align: center;
+  border: 0.2rem solid #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--small-margin);
+  margin-bottom: var(--small-margin);
 }
