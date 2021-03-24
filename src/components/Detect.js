@@ -53,7 +53,11 @@ const Detect = () => {
       const loadedModel = await tf.loadLayersModel('/model/my-model.json');
       setModel(loadedModel);
     };
-    loadModels();
+
+    if (model === null || poseNetModel === null) {
+      loadModels();
+    }
+    return () => resetStates();
   }, []);
 
   const runPosenet = () => {
