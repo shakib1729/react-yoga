@@ -10,6 +10,7 @@
   --clr-background-2: #071315;
   --clr-primary: #348ea3;
   --clr-font: #bae0e9;
+  --clr-shadow: #348ea3;
 }
 
 .dark-theme {
@@ -18,6 +19,7 @@
   --clr-primary: #348ea3;
   --clr-font: #bae0e9;
   --img-brightness: 1;
+  --clr-shadow: #348ea3;
 }
 
 .light-theme {
@@ -26,6 +28,7 @@
   --clr-primary: #071315;
   --clr-font: #030708;
   --img-brightness: 0.2;
+  --clr-shadow: #86c9d8;
 }
 
 * {
@@ -155,6 +158,11 @@ li {
 
 #sidebar-left li {
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+#sidebar-left li:hover {
+  text-shadow: 0 0 1rem var(--clr-shadow);
 }
 
 .poselist-img {
@@ -162,6 +170,16 @@ li {
   width: 5rem;
   height: 5rem;
   filter: brightness(var(--img-brightness));
+  transition: all 0.3s linear;
+  /* box-shadow: 0 0 1rem var(--clr-shadow); */
+}
+
+.poselist-img:hover {
+  box-shadow: 0 0 1rem var(--clr-shadow);
+}
+
+.poselist-img selected {
+  box-shadow: 0 0 1rem var(--clr-shadow);
 }
 
 .poselist-name {
@@ -186,6 +204,7 @@ li {
   margin-right: auto;
   margin-top: var(--small-margin);
   margin-bottom: var(--small-margin);
+  box-shadow: 0 0 0.3rem var(--clr-shadow);
 }
 
 .toggle-container {
@@ -299,5 +318,5 @@ input:checked + .slider:before {
 }
 
 .hover-2:hover {
-  text-shadow: 0 0 0.3rem #2196f3;
+  text-shadow: 0 0 0.3rem var(--clr-shadow);
 }
