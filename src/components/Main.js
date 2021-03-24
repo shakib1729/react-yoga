@@ -4,6 +4,7 @@ import * as tf from '@tensorflow/tfjs';
 import * as posenet from '@tensorflow-models/posenet';
 import Webcam from 'react-webcam';
 import { drawKeypoints, drawSkeleton } from '../utilities/utilities';
+import MainText from './MainText';
 
 const Main = () => {
   const webcamRef = useRef(null);
@@ -213,7 +214,7 @@ const Main = () => {
             />
           </div>
         ) : (
-          <p>Turn On</p>
+          <MainText />
         )}
       </section>
       <section className='button-section'>
