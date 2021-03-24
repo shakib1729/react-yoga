@@ -239,7 +239,7 @@ li {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .slider:before {
@@ -254,8 +254,8 @@ li {
   left: 4px;
   bottom: 2px; */
   background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 input:checked + .slider {
@@ -311,7 +311,7 @@ input:checked + .slider:before {
   height: 3px;
   transform: scaleX(0);
   background-color: #6dbed0;
-  transition: transform 0.3s;
+  transition: transform 0.2s;
 }
 .hover-2:hover:after {
   transform: scaleX(1);
