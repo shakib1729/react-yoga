@@ -179,7 +179,7 @@ const Detect = () => {
   };
 
   return (
-    <>
+    <section className='main-container'>
       <button className='btn btn-1' onClick={() => changeIsDetecting()}>
         <h4> {isDetecting ? `Stop` : `Let's Begin`} </h4>
       </button>
@@ -217,7 +217,7 @@ const Detect = () => {
       ) : (
         <p>Turn On</p>
       )}
-    </>
+    </section>
   );
 };
 
