@@ -14,7 +14,7 @@ export const AppProvider = ({ children }) => {
   const [poseNetModel, setPoseNetModel] = useState(null);
   const [model, setModel] = useState(null);
   const [timer, setTimer] = useState(10);
-  const [currPose, setCurrPose] = useState(0);
+  const [currPose, setCurrPose] = useState(1);
   const [scores, setScores] = useState([0, 0]);
   const [isDetecting, setIsDetecting] = useState(false);
   const [theme, setTheme] = useState(getStorageTheme());
