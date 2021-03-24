@@ -180,45 +180,43 @@ const Detect = () => {
 
   return (
     <>
-      <button onClick={() => changeIsDetecting()}>
-        <h4> {isDetecting ? 'Stop detecting' : 'Start Detecting'} </h4>
+      <button className='btn btn-1' onClick={() => changeIsDetecting()}>
+        <h4> {isDetecting ? `Stop` : `Let's Begin`} </h4>
       </button>
-      <>
-        {isDetecting ? (
-          <div className='video-container'>
-            <Webcam
-              ref={webcamRef}
-              mirrored
-              style={{
-                position: 'absolute',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                left: 0,
-                right: 0,
-                zindex: 9,
-                width: videoWidth,
-                height: videoHeight,
-              }}
-            />
+      {isDetecting ? (
+        <div className='video-container'>
+          <Webcam
+            ref={webcamRef}
+            mirrored
+            style={{
+              position: 'absolute',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              left: 0,
+              right: 0,
+              zindex: 9,
+              width: videoWidth,
+              height: videoHeight,
+            }}
+          />
 
-            <canvas
-              ref={canvasRef}
-              style={{
-                position: 'absolute',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                left: 0,
-                right: 0,
-                zindex: 9,
-                width: videoWidth,
-                height: videoHeight,
-              }}
-            />
-          </div>
-        ) : (
-          <p>Turn On</p>
-        )}
-      </>
+          <canvas
+            ref={canvasRef}
+            style={{
+              position: 'absolute',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              left: 0,
+              right: 0,
+              zindex: 9,
+              width: videoWidth,
+              height: videoHeight,
+            }}
+          />
+        </div>
+      ) : (
+        <p>Turn On</p>
+      )}
     </>
   );
 };
