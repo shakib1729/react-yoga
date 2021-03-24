@@ -9,7 +9,13 @@ const PoseList = () => {
       <ul>
         {poses.map((pose) => (
           <li key={pose.id} onClick={() => setCurrPose(pose.id)}>
-            <img className='poselist-img' src={pose.img} alt={pose.name} />
+            <img
+              className={`poselist-img ${
+                currPose == pose.id ? 'pose-selected' : ''
+              }`}
+              src={pose.img}
+              alt={pose.name}
+            />
             <h4 className='poselist-name'>{pose.name}</h4>
           </li>
         ))}

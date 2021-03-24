@@ -158,7 +158,7 @@ li {
 
 #sidebar-left li {
   cursor: pointer;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 
 #sidebar-left li:hover {
@@ -170,7 +170,7 @@ li {
   width: 5rem;
   height: 5rem;
   filter: brightness(var(--img-brightness));
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
   /* box-shadow: 0 0 1rem var(--clr-shadow); */
 }
 
@@ -178,8 +178,8 @@ li {
   box-shadow: 0 0 1rem var(--clr-shadow);
 }
 
-.poselist-img selected {
-  box-shadow: 0 0 1rem var(--clr-shadow);
+.pose-selected {
+  box-shadow: 0 0 0.5rem var(--clr-shadow);
 }
 
 .poselist-name {
