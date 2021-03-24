@@ -5,7 +5,8 @@ const Header = () => {
   const location = useLocation();
   return (
     <header>
-      <h1>ReactYoga</h1>
+      <span className='heading'>React Yoga</span>
+      {/* <h1>ReactYoga</h1> */}
       <div class='link-wrapper'>
         <Link
           to={location.pathname == '/about' ? '/' : '/about'}

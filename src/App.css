@@ -372,3 +372,19 @@ button:focus {
   /* border: 3px solid var(--clr-primary); */
   border: 0.3rem solid var(--clr-primary);
 }
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  /* position: absolute; */
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  font-size: 2.7rem;
+  letter-spacing: 0.7rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-color: white;
+  text-shadow: 0.2rem 0.2rem var(--clr-primary), 0.4rem 0.4rem #000000;
+}
