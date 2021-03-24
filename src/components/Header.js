@@ -13,9 +13,6 @@ const Header = () => {
         >
           {location.pathname == '/about' ? 'Home' : 'About'}
         </Link>
-        {/* <a class='link hover-2' href='#'>
-          Link
-        </a> */}
       </div>
 
       <DarkMode />
