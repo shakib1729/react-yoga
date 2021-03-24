@@ -84,8 +84,20 @@ main {
   background: var(--clr-background-2);
   grid-area: main;
   border-radius: var(--small-radius);
-  padding-top: var(--medium-padding);
   transition: all 0.3s linear;
+  display: grid;
+  grid-template-rows: 3fr 0.5fr;
+  grid-gap: 0.5rem;
+  text-align: center;
+}
+
+.video-section {
+  background: var(--clr-background-2);
+  padding-top: 5rem;
+}
+
+.button-section {
+  background: var(--clr-background-2);
 }
 
 footer {
