@@ -11,7 +11,7 @@ const MainText = () => {
           for 10 seconds)
         </li>
         <li>
-          4) Keep your face towrads the camera and the camera should have full
+          4) Keep your face towards the camera and the camera should have full
           view including legs
         </li>
         <li>
