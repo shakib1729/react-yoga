@@ -5,6 +5,8 @@ const Header = () => {
   const location = useLocation();
   return (
     <header>
+      <div className='heading-left-1'></div>
+      <div className='heading-left-2'></div>
       <span className='heading'>React Yoga</span>
       {/* <h1>ReactYoga</h1> */}
       <div class='link-wrapper'>

@@ -77,13 +77,35 @@ html {
 header {
   background: var(--clr-background-1);
   grid-area: header;
-  border-radius: var(--small-radius);
-  padding-top: var(--medium-padding);
+  /* border-radius: var(--small-radius); */
+  /* padding-top: var(--medium-padding); */
   transition: all 0.3s linear;
   display: grid;
-  grid-template-columns: 5fr 0.5fr 0.5fr;
+  /* grid-template-columns: 3fr 0.5fr 0.5fr; */
+  grid-template-columns: 1fr 1fr 8fr 1fr 1fr;
   grid-gap: 0.5rem;
   padding: var(--medium-padding);
+  grid-template-areas: 'heading-left-1 heading-left-2 heading link-wrapper toggle-container';
+}
+
+.heading-left-1 {
+  grid-area: heading-left-1;
+}
+
+.heading-left-2 {
+  grid-area: heading-left-2;
+}
+
+.heading {
+  grid-area: heading;
+}
+
+.link-wrapper {
+  grid-area: link-wrapper;
+}
+
+.toggle-container {
+  grid-area: toggle-container;
 }
 
 main {
@@ -152,22 +174,6 @@ footer {
 
 .video-container {
   position: relative;
-}
-
-@media only screen and (max-width: 550px) {
-  html {
-    font-size: 70%;
-  }
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 1fr 2.2fr 1fr 0.3fr;
-    grid-template-areas:
-      'header'
-      'sidebar-left'
-      'main'
-      'sidebar-right'
-      'footer';
-  }
 }
 
 li {
@@ -394,6 +400,7 @@ button:focus {
   -webkit-text-stroke-color: white;
   text-shadow: 0.2rem 0.2rem var(--clr-primary), 0.4rem 0.4rem #000000;
 }
+
 /* 
 .main-text {
   height: 70%;
@@ -412,7 +419,7 @@ button:focus {
 } */
 
 .neu-card {
-  height: 70%;
+  height: 90%;
   margin-left: 5rem;
   margin-right: 5rem;
   border-radius: 1rem;
@@ -428,9 +435,46 @@ button:focus {
 }
 
 .main-text {
+  text-transform: none;
+  font-size: 1.25rem;
+  font-weight: 600;
   padding-top: var(--medium-padding);
 }
 
 .main-text li {
   margin: var(--medium-margin);
+}
+
+@media only screen and (max-width: 550px) {
+  html {
+    font-size: 70%;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 1fr 2.2fr 1fr 0.3fr;
+    grid-template-areas:
+      'header'
+      'sidebar-left'
+      'main'
+      'sidebar-right'
+      'footer';
+  }
+  header {
+    grid-template-columns: 3fr 0.5fr 0.5fr;
+    grid-gap: 0.1rem;
+    grid-template-areas: 'heading link-wrapper toggle-container';
+  }
+
+  .heading {
+    letter-spacing: 0.3rem;
+    -webkit-text-stroke-width: 0.1rem;
+    text-shadow: 0.2rem 0.2rem var(--clr-primary), 0.4rem 0.4rem #000000;
+  }
+
+  .link-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: var(--small-margin);
+  }
 }
