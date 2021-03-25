@@ -93,7 +93,7 @@ main {
   transition: all 0.3s linear;
   display: grid;
   grid-template-rows: 3fr 0.5fr;
-  grid-gap: 0.5rem;
+  /* grid-gap: 0.5rem; */
   text-align: center;
 }
 
@@ -425,4 +425,12 @@ button:focus {
 .neu-card:hover {
   box-shadow: 0.25rem 0.25rem 0.3rem var(--clr-neu-shadow-1),
     -0.25rem -0.25rem 0.3rem var(--clr-neu-shadow-2);
+}
+
+.main-text {
+  padding-top: var(--medium-padding);
+}
+
+.main-text li {
+  margin: var(--medium-margin);
 }
