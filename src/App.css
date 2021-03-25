@@ -437,7 +437,7 @@ button:focus {
 .main-text {
   text-transform: none;
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
   padding-top: var(--medium-padding);
 }
 
