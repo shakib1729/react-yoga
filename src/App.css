@@ -11,6 +11,8 @@
   --clr-primary: #348ea3;
   --clr-font: #bae0e9;
   --clr-shadow: #348ea3;
+  --clr-neu-shadow-1: #030808;
+  --clr-neu-shadow-2: #0b1e22;
 }
 
 .dark-theme {
@@ -20,6 +22,8 @@
   --clr-font: #bae0e9;
   --img-brightness: 1;
   --clr-shadow: #348ea3;
+  --clr-neu-shadow-1: #050e10;
+  --clr-neu-shadow-2: #09181a;
 }
 
 .light-theme {
@@ -29,6 +33,8 @@
   --clr-font: #030708;
   --img-brightness: 0.2;
   --clr-shadow: #86c9d8;
+  --clr-neu-shadow-1: #77b3c0;
+  --clr-neu-shadow-2: #95dff0;
 }
 
 * {
@@ -387,4 +393,36 @@ button:focus {
   -webkit-text-stroke-width: 0.15rem;
   -webkit-text-stroke-color: white;
   text-shadow: 0.2rem 0.2rem var(--clr-primary), 0.4rem 0.4rem #000000;
+}
+/* 
+.main-text {
+  height: 70%;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 14px;
+  background: var(--clr-background-2);
+  box-shadow: 6px 6px 8px var(--clr-neu-shadow-1),
+    -6px -6px 8px var(--clr-neu-shadow-2);
+  transition: all 0.1s linear;
+}
+
+.main-text:hover {
+  box-shadow: 3px 3px 4px var(--clr-neu-shadow-1),
+    -3px -3px 4px var(--clr-neu-shadow-2);
+} */
+
+.neu-card {
+  height: 70%;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 1rem;
+  background: var(--clr-background-2);
+  box-shadow: 0.5rem 0.5rem 0.6rem var(--clr-neu-shadow-1),
+    -0.5rem -0.5rem 0.6rem var(--clr-neu-shadow-2);
+  transition: all 0.1s linear;
+}
+
+.neu-card:hover {
+  box-shadow: 0.25rem 0.25rem 0.3rem var(--clr-neu-shadow-1),
+    -0.25rem -0.25rem 0.3rem var(--clr-neu-shadow-2);
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MainText = () => {
-  return <div>Turn On</div>;
+  return <div className='neu-card'>Turn On</div>;
 };
 
 export default MainText;
