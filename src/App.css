@@ -478,3 +478,25 @@ button:focus {
     margin-bottom: var(--small-margin);
   }
 }
+
+.about-container {
+  background: var(--clr-background-2);
+  grid-area: main;
+  padding-top: 5rem;
+  border-radius: var(--small-radius);
+  transition: all 0.3s linear;
+  display: grid;
+  grid-template-rows: 3fr 0.5fr;
+  /* grid-gap: 0.5rem; */
+  text-align: center;
+}
+
+#about-sidebar-left {
+  grid-area: sidebar-left;
+  background: var(--clr-background-2);
+}
+
+#about-sidebar-right {
+  grid-area: sidebar-right;
+  background: var(--clr-background-2);
+}
