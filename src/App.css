@@ -447,7 +447,7 @@ button:focus {
 
 @media only screen and (max-width: 550px) {
   html {
-    font-size: 60%;
+    font-size: 70%;
   }
   .container {
     grid-template-columns: 1fr;

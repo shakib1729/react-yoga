@@ -45,6 +45,7 @@ const About = () => {
                   alt='TensorFlowJS'
                 />
               </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a
                 href='https://www.linkedin.com/in/shakib-1729'
                 target='_blank'
