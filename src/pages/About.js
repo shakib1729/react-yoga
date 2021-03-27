@@ -7,28 +7,36 @@ const About = () => {
       <section className='about-container'>
         <p className='neu-card main-text'>
           <ul>
-            <li>1) Select a Pose (Asana) from the list on left side</li>
-            <li>2) Click 'Let's Begin' button below</li>
+            <li>React Yoga - Do Yoga poses better</li>
+            <li>This web app is developed using ReactJS and TensorflowJS</li>
+            <li>For more info, please visit the GitHub repository:</li>
             <li>
-              3) Adjust your position within 10 seconds. (The timer on right
-              runs for 10 seconds)
+              <img
+                src='/img/tfjs.png'
+                className='logo-tfjs'
+                alt='TensorFlowJS'
+              />
+              <img
+                src='/img/reactjs.png'
+                className='logo-reactjs'
+                alt='ReactJS'
+              />
             </li>
-            <li>
-              4) Keep your face towards the camera and the camera should have
-              full view including legs
-            </li>
-            <li>
-              5) Perform the selected pose for 10 seconds (The timer again runs
-              for 10 seconds)
-            </li>
-            <li>6) The better you perform the pose, more the score you get</li>
+            <li>Find me on:</li>
+            <l1>
+              <img
+                src='/img/github.png'
+                className='logo-github'
+                alt='TensorFlowJS'
+              />
+              <img
+                src='/img/linkedin.png'
+                className='logo-linkedin'
+                alt='ReactJS'
+              />
+            </l1>
           </ul>
         </p>
-        <section className='button-section'>
-          <button className='btn btn-1'>
-            <h4> Hello </h4>
-          </button>
-        </section>
       </section>
       <section id='about-sidebar-right'></section>
     </>

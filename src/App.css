@@ -485,8 +485,8 @@ button:focus {
   padding-top: 5rem;
   border-radius: var(--small-radius);
   transition: all 0.3s linear;
-  display: grid;
-  grid-template-rows: 3fr 0.5fr;
+  /* display: grid;
+  grid-template-rows: 1fr; */
   /* grid-gap: 0.5rem; */
   text-align: center;
 }
@@ -499,4 +499,27 @@ button:focus {
 #about-sidebar-right {
   grid-area: sidebar-right;
   background: var(--clr-background-2);
+}
+
+.logo-tfjs {
+  height: 10rem;
+  /* width: 17rem; */
+}
+
+.logo-reactjs {
+  height: 7rem;
+  margin-bottom: var(--medium-margin);
+  /* width: 17rem; */
+}
+
+.logo-github {
+  height: 5rem;
+  /* width: 17rem; */
+  margin-left: 7rem;
+}
+
+.logo-linkedin {
+  margin-left: 5rem;
+  height: 4.5rem;
+  /* width: 17rem; */
 }
