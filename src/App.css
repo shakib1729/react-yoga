@@ -164,6 +164,17 @@ footer {
 #sidebar-score {
   background: var(--clr-background-1);
   transition: all 0.3s linear;
+  /* display: grid;
+  grid-template-rows: 1fr 1fr 5fr;
+  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-areas:
+    'score-heading score-heading score-heading'
+    'current-score current-score best-score'
+    'score-pose score-pose-current score-pose-best'; */
+}
+
+.score-heading {
+  grid-area: score-heading;
 }
 
 #sidebar-poseimg {
