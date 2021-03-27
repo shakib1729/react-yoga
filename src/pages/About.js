@@ -5,11 +5,20 @@ const About = () => {
     <>
       <section id='about-sidebar-left'></section>
       <section className='about-container'>
-        <p className='neu-card main-text'>
+        <p className='neu-card about-text'>
           <ul>
             <li>React Yoga - Do Yoga poses better</li>
             <li>This web app is developed using ReactJS and TensorflowJS</li>
-            <li>For more info, please visit the GitHub repository:</li>
+            <li>
+              For more info, please visit the &nbsp;
+              <a
+                href='https://github.com/shakib1729/react-yoga'
+                target='_blank'
+                rel='noreferrer'
+              >
+                GitHub repository
+              </a>
+            </li>
             <li>
               <img
                 src='/img/tfjs.png'
@@ -22,18 +31,31 @@ const About = () => {
                 alt='ReactJS'
               />
             </li>
-            <li>Find me on:</li>
+            {/* <li></li> */}
             <l1>
-              <img
-                src='/img/github.png'
-                className='logo-github'
-                alt='TensorFlowJS'
-              />
-              <img
-                src='/img/linkedin.png'
-                className='logo-linkedin'
-                alt='ReactJS'
-              />
+              Find me on: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a
+                href='https://github.com/shakib1729'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src='/img/github.png'
+                  className='logo-github'
+                  alt='TensorFlowJS'
+                />
+              </a>
+              <a
+                href='https://www.linkedin.com/in/shakib-1729'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <img
+                  src='/img/linkedin.png'
+                  className='logo-linkedin'
+                  alt='ReactJS'
+                />
+              </a>
             </l1>
           </ul>
         </p>

@@ -447,7 +447,7 @@ button:focus {
 
 @media only screen and (max-width: 550px) {
   html {
-    font-size: 70%;
+    font-size: 60%;
   }
   .container {
     grid-template-columns: 1fr;
@@ -509,17 +509,26 @@ button:focus {
 .logo-reactjs {
   height: 7rem;
   margin-bottom: var(--medium-margin);
+  filter: brightness(var(--img-brightness));
   /* width: 17rem; */
 }
 
 .logo-github {
   height: 5rem;
   /* width: 17rem; */
-  margin-left: 7rem;
+  /* margin-left: 7rem; */
 }
 
 .logo-linkedin {
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   height: 4.5rem;
   /* width: 17rem; */
+}
+
+.about-text {
+  height: 90%;
+  text-transform: none;
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding-top: var(--medium-padding);
 }
