@@ -532,3 +532,8 @@ button:focus {
   font-weight: 400;
   padding-top: var(--medium-padding);
 }
+
+footer a {
+  color: inherit;
+  text-decoration: inherit;
+}
