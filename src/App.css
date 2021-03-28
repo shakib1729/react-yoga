@@ -495,6 +495,7 @@ button:focus {
 
 .logo-github {
   height: 5rem;
+  transition: all 0.1s linear;
   /* width: 17rem; */
   /* margin-left: 7rem; */
 }
@@ -506,6 +507,7 @@ button:focus {
 .logo-linkedin {
   /* margin-left: 5rem; */
   height: 4.5rem;
+  transition: all 0.1s linear;
   /* width: 17rem; */
 }
 
@@ -524,6 +526,9 @@ button:focus {
 footer a {
   color: inherit;
   text-decoration: inherit;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 950px) {
