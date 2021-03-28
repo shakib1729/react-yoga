@@ -76,7 +76,6 @@ const Main = () => {
     setTimer(10);
     const timerVar = setInterval(() => {
       setTimer(timerRef.current - 1);
-      console.log(timerRef.current);
       if (timerRef.current == 0) {
         clearInterval(timerVar);
         clearInterval(timerVarRef.current);
@@ -165,7 +164,6 @@ const Main = () => {
         return score;
       })
     );
-    console.log(bestScoresRef.current);
     localStorage.setItem('bestScores', JSON.stringify(bestScoresRef.current));
     setScores([0, 0]);
   };
