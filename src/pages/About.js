@@ -31,7 +31,7 @@ const About = () => {
                 alt='ReactJS'
               />
             </li>
-            <l1>
+            <li>
               Find me on: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a
                 href='https://github.com/shakib1729'
@@ -56,7 +56,7 @@ const About = () => {
                   alt='ReactJS'
                 />
               </a>
-            </l1>
+            </li>
           </ul>
         </div>
       </section>
