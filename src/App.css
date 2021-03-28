@@ -565,7 +565,10 @@ footer a:hover {
   }
 }
 
-@media only screen and (max-height: 570px) {
+@media only screen and (max-height: 590px) {
+  html {
+    font-size: 75%;
+  }
   .main-warning {
     display: block;
   }
