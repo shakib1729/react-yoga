@@ -5,9 +5,9 @@ const About = () => {
     <>
       <section id='about-sidebar-left'></section>
       <section className='about-container'>
-        <p className='neu-card about-text'>
+        <div className='neu-card about-text'>
           <ul>
-            <li>React Yoga - Do Yoga poses better</li>
+            <li>React Yoga - Do Yoga divoses better</li>
             <li>This web app is developed using ReactJS and TensorflowJS</li>
             <li>
               For more info, please visit the&nbsp;
@@ -58,7 +58,7 @@ const About = () => {
               </a>
             </l1>
           </ul>
-        </p>
+        </div>
       </section>
       <section id='about-sidebar-right'></section>
     </>
