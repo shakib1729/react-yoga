@@ -9,8 +9,8 @@ import MainText from './MainText';
 const Main = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
-  const videoWidth = 426,
-    videoHeight = 240;
+  const videoWidth = 640,
+    videoHeight = 480;
   const {
     poseNetModel,
     model,
