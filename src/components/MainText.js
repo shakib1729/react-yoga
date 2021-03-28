@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainText = () => {
   return (
-    <p className='neu-card main-text'>
+    <div className='neu-card main-text'>
       <ul>
         <li>1) Select a Pose (Asana) from the list on left side</li>
         <li>2) Click 'Let's Begin' button below</li>
@@ -20,7 +20,7 @@ const MainText = () => {
         </li>
         <li>6) The better you perform the pose, more the score you get</li>
       </ul>
-    </p>
+    </div>
   );
 };
 

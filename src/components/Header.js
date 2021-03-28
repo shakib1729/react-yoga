@@ -8,8 +8,7 @@ const Header = () => {
       <div className='heading-left-1'></div>
       <div className='heading-left-2'></div>
       <span className='heading'>React Yoga</span>
-      {/* <h1>ReactYoga</h1> */}
-      <div class='link-wrapper'>
+      <div className='link-wrapper'>
         <Link
           to={location.pathname == '/about' ? '/' : '/about'}
           className='link hover-2'
