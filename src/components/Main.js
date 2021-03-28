@@ -37,6 +37,9 @@ const Main = () => {
   const scoresRef = useRef(scores);
   scoresRef.current = scores;
 
+  const bestScoresRef = useRef(bestScores);
+  bestScoresRef.current = bestScores;
+
   const isDetectingRef = useRef(isDetecting);
   isDetectingRef.current = isDetecting;
 
@@ -157,11 +160,13 @@ const Main = () => {
 
   const updateScores = () => {
     setBestScores(
-      bestScores.map((score, idx) => {
+      bestScoresRef.current.map((score, idx) => {
         if (scoresRef.current[idx] > score) return scoresRef.current[idx];
         return score;
       })
     );
+    console.log(bestScoresRef.current);
+    localStorage.setItem('bestScores', JSON.stringify(bestScoresRef.current));
     setScores([0, 0]);
   };
 
