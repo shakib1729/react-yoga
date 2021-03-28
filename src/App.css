@@ -126,6 +126,7 @@ main {
 
 .button-section {
   background: var(--clr-background-2);
+  padding-bottom: var(--small-padding);
 }
 
 footer {
@@ -458,40 +459,6 @@ button:focus {
   margin: var(--medium-margin);
 }
 
-@media only screen and (max-width: 550px) {
-  html {
-    font-size: 70%;
-  }
-  .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 1fr 2.2fr 1fr 0.3fr;
-    grid-template-areas:
-      'header'
-      'sidebar-left'
-      'main'
-      'sidebar-right'
-      'footer';
-  }
-  header {
-    grid-template-columns: 3fr 0.5fr 0.5fr;
-    grid-gap: 0.1rem;
-    grid-template-areas: 'heading link-wrapper toggle-container';
-  }
-
-  .heading {
-    letter-spacing: 0.3rem;
-    -webkit-text-stroke-width: 0.1rem;
-    text-shadow: 0.2rem 0.2rem var(--clr-primary), 0.4rem 0.4rem #000000;
-  }
-
-  .link-wrapper {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-top: 0.75rem;
-    margin-bottom: var(--small-margin);
-  }
-}
-
 .about-container {
   background: var(--clr-background-2);
   grid-area: main;
@@ -532,6 +499,10 @@ button:focus {
   /* margin-left: 7rem; */
 }
 
+/* .logo-github:hover {
+  
+} */
+
 .logo-linkedin {
   /* margin-left: 5rem; */
   height: 4.5rem;
@@ -549,4 +520,99 @@ button:focus {
 footer a {
   color: inherit;
   text-decoration: inherit;
+}
+
+@media only screen and (max-width: 950px) {
+  html {
+    font-size: 75%;
+  }
+  .neu-card {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  html {
+    font-size: 65%;
+  }
+  .btn {
+    width: 10rem;
+  }
+}
+
+@media only screen and (max-width: 570px), only screen and (max-height: 500px) {
+  html {
+    font-size: 60%;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 1fr 2.2fr 1fr 0.3fr;
+    grid-template-areas:
+      'header'
+      'sidebar-left'
+      'main'
+      'sidebar-right'
+      'footer';
+  }
+  header {
+    grid-template-columns: 3fr 0.5fr 0.5fr;
+    grid-gap: 0.1rem;
+    grid-template-areas: 'heading link-wrapper toggle-container';
+  }
+
+  .heading {
+    letter-spacing: 0.3rem;
+    -webkit-text-stroke-width: 0.1rem;
+    text-shadow: 0.2rem 0.2rem var(--clr-primary), 0.4rem 0.4rem #000000;
+  }
+
+  .link-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: var(--small-margin);
+  }
+
+  main {
+    grid-gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .main-text {
+    padding-top: var(--small-padding);
+  }
+
+  .main-text li {
+    margin: var(--small-margin);
+  }
+
+  .neu-card {
+    height: 95%;
+  }
+
+  .btn {
+    width: 12rem;
+  }
+  .about-container {
+    padding-bottom: 5rem;
+  }
+  .about-text {
+    padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-height: 450px) {
+  .big-pose-img {
+    width: 13rem;
+    height: 15rem;
+  }
+}
+
+@media only screen and (max-width: 385px) {
+  .link-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 2.5rem;
+  }
 }
