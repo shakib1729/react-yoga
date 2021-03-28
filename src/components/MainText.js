@@ -16,9 +16,11 @@ const MainText = () => {
         </li>
         <li>
           5) Perform the selected pose for 10 seconds (The timer again runs for
-          10 seconds)
+          10 seconds but there is a slight delay when it runs for the first
+          time)
         </li>
         <li>6) The better you perform the pose, more the score you get</li>
+        <li>7) Try to beat your best score!</li>
       </ul>
     </div>
   );
