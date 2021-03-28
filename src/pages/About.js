@@ -10,7 +10,7 @@ const About = () => {
             <li>React Yoga - Do Yoga poses better</li>
             <li>This web app is developed using ReactJS and TensorflowJS</li>
             <li>
-              For more info, please visit the &nbsp;
+              For more info, please visit the&nbsp;
               <a
                 href='https://github.com/shakib1729/react-yoga'
                 target='_blank'

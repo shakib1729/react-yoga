@@ -469,6 +469,12 @@ footer a {
   color: inherit;
   text-decoration: inherit;
 }
+
+.about-text a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 footer a:hover {
   text-decoration: underline;
 }
