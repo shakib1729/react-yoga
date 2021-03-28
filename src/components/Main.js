@@ -18,12 +18,14 @@ const Main = () => {
     currPose,
     scores,
     isDetecting,
+    bestScores,
     setPoseNetModel,
     setModel,
     setTimer,
     setCurrPose,
     setScores,
     setIsDetecting,
+    setBestScores,
   } = useGlobalContext();
 
   const timerRef = useRef(timer);
@@ -153,8 +155,19 @@ const Main = () => {
     }
   };
 
+  const updateScores = () => {
+    setBestScores(
+      bestScores.map((score, idx) => {
+        if (scoresRef.current[idx] > score) return scoresRef.current[idx];
+        return score;
+      })
+    );
+    setScores([0, 0]);
+  };
+
   const resetStates = () => {
     // isDetectingRef.current = false;
+
     setIsDetecting(false);
     clearInterval(intervalRef.current);
     clearInterval(timerVarRef.current);
@@ -175,8 +188,10 @@ const Main = () => {
   };
 
   const changeIsDetecting = () => {
-    if (isDetectingRef.current) resetStates();
-    else startDetecting();
+    if (isDetectingRef.current) {
+      resetStates();
+      updateScores();
+    } else startDetecting();
   };
 
   return (

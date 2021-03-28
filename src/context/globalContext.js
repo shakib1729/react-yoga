@@ -14,8 +14,9 @@ export const AppProvider = ({ children }) => {
   const [poseNetModel, setPoseNetModel] = useState(null);
   const [model, setModel] = useState(null);
   const [timer, setTimer] = useState(10);
-  const [currPose, setCurrPose] = useState(1);
+  const [currPose, setCurrPose] = useState(0);
   const [scores, setScores] = useState([0, 0]);
+  const [bestScores, setBestScores] = useState([0, 0]);
   const [isDetecting, setIsDetecting] = useState(false);
   const [theme, setTheme] = useState(getStorageTheme());
   const poses = [
@@ -41,6 +42,7 @@ export const AppProvider = ({ children }) => {
         isDetecting,
         poses,
         theme,
+        bestScores,
         setPoseNetModel,
         setModel,
         setTimer,
@@ -48,6 +50,7 @@ export const AppProvider = ({ children }) => {
         setScores,
         setIsDetecting,
         setTheme,
+        setBestScores,
       }}
     >
       {children}
