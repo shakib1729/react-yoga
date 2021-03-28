@@ -31,7 +31,6 @@ const About = () => {
                 alt='ReactJS'
               />
             </li>
-            {/* <li></li> */}
             <l1>
               Find me on: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <a

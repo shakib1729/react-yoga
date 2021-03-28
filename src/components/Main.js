@@ -241,6 +241,7 @@ const Main = () => {
         <button className='btn btn-1' onClick={() => changeIsDetecting()}>
           <h4> {isDetecting ? `Stop` : `Let's Begin`} </h4>
         </button>
+        <p className='main-warning'>Please visit on a larger device</p>
       </section>
     </main>
   );

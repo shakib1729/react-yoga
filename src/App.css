@@ -110,7 +110,6 @@ main {
   transition: all 0.3s linear;
   display: grid;
   grid-template-rows: 5fr 0.5fr;
-
   text-align: center;
 }
 
@@ -122,6 +121,11 @@ main {
 .button-section {
   background: var(--clr-background-2);
   padding-bottom: var(--small-padding);
+}
+
+.main-warning {
+  display: none;
+  text-decoration: underline;
 }
 
 footer {
@@ -477,6 +481,12 @@ footer a:hover {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+  .main-warning {
+    display: block;
+  }
+  .btn-1 {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 660px) {
@@ -546,6 +556,15 @@ footer a:hover {
   }
   .about-text {
     padding: 0.5rem;
+  }
+}
+
+@media only screen and (max-height: 570px) {
+  .main-warning {
+    display: block;
+  }
+  .btn-1 {
+    display: none;
   }
 }
 
