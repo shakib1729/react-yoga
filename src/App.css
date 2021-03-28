@@ -499,14 +499,18 @@ button:focus {
   /* margin-left: 7rem; */
 }
 
-/* .logo-github:hover {
-  
-} */
+.logo-github:hover {
+  transform: rotate(-10deg);
+}
 
 .logo-linkedin {
   /* margin-left: 5rem; */
   height: 4.5rem;
   /* width: 17rem; */
+}
+
+.logo-linkedin:hover {
+  transform: rotate(-10deg);
 }
 
 .about-text {
