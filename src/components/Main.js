@@ -10,7 +10,7 @@ const Main = () => {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
   const videoWidth = 640,
-    videoHeight = 480;
+    videoHeight = 400;
   const {
     poseNetModel,
     model,
