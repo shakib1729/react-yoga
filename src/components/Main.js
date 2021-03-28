@@ -125,12 +125,12 @@ const Main = () => {
     const inputTensor = tf.tensor2d(input, [1, input.length]);
     const prediction = model.predict(inputTensor);
     const predictedClass = prediction.argMax(-1).dataSync();
-    console.log(
-      'Predicted: ',
-      predictedClass[0],
-      ' Current:  ',
-      currPoseRef.current
-    );
+    // console.log(
+    //   'Predicted: ',
+    //   predictedClass[0],
+    //   ' Current:  ',
+    //   currPoseRef.current
+    // );
     if (predictedClass[0] == currPoseRef.current) {
       // We made a correct prediction,
       // so increment the score of current pose
@@ -141,9 +141,9 @@ const Main = () => {
           else return currScore;
         })
       );
-      console.log('Yes');
+      // console.log('Yes');
     } else {
-      console.log('No');
+      // console.log('No');
     }
   };
 
