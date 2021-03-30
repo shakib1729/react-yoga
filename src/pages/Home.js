@@ -1,7 +1,7 @@
 import React from 'react';
-import PoseList from './PoseList';
-import SidebarRight from './SidebarRight';
-import Main from './Main';
+import PoseList from '../components/PoseList';
+import SidebarRight from '../components/SidebarRight';
+import Main from '../components/Main';
 
 const Home = () => {
   return (
