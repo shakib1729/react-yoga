@@ -9,8 +9,8 @@
     <br />
     Visit:  www.reactyoga.ml
     <br />
-    <a href="/">View Demo</a>
-    ·
+    <!-- <a href="/">View Demo</a>
+    · -->
     <a href="https://github.com/shakib1729/react-yoga/issues">Report Bug</a>
   
   </p>
@@ -34,8 +34,6 @@
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
-
-<!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
@@ -66,8 +64,6 @@ This web app is developed using React and TensorflowJS
 - [React-CSV](https://github.com/react-csv/react-csv) - To generate the CSV file of the dataset
 - [Papa Parse](https://www.papaparse.com/) - To parse the CSV files in browser
 
-<!-- GETTING STARTED -->
-
 ## Usage
 
 The live version of this web app is deployed using AWS Amplify at: https://www.reactyoga.ml
@@ -87,8 +83,6 @@ To set up locally, follow these simple steps:
    npm start
    ```
 
-<!-- DEVELOPMENT PROCESS -->
-
 ## Development Process
 
 ### Step 1) Collecting the Dataset
@@ -104,7 +98,7 @@ To set up locally, follow these simple steps:
 ### Step 2) Training the model
 
 - A neural network was created using TensorFlowJS to perform the classification. It had two dense layers: the first dense layer had 10 units and activation function was 'relu'. The second dense layer was the output layer with 3 units and activation function was 'softmax'.
-- The dataset 'X' and 'Y' which we created in the previous step were shuffled and split such that 85% was the training data and 15% was the testing data.
+- The dataset files 'X' and 'Y' which were created in the previous step were parse using PapaParse and were shuffled and split such that 85% was the training data and 15% was the testing data.
 - The following parameters were set: <br />
   Learning rate: 0.01 <br/>
   Number of epochs: 40 <br/>
@@ -117,8 +111,25 @@ To set up locally, follow these simple steps:
 
 ### Step 3) Testing the model
 
-<!-- ACKNOWLEDGEMENTS -->
+- The neural network model created in the last step was used to make predictions on live webcam feed.
+- Input from webcam was feeded to PoseNet model which generated a datapoint of 34 features.
+- This datapoint was used as an input to the neural network model and prediction corresponding to that input image was obtained
+
+### Step 4) Creating the final web app and deploying it
+
+- The layout of webapp was created using CSS Grid
+- User interface was created in React
+- Routing was added to navigate to the about page
+- Option to toggle between light and dark mode was added
+- Finally deployed using AWS Amplify
+  ![image](https://user-images.githubusercontent.com/39847281/113433029-121f1280-93fc-11eb-8b5b-4a18526dfb42.png)
 
 ## Acknowledgements
 
-- [YogaPedia](https://www.yogapedia.com/)
+- The images of poses are taken from [YogaPedia](https://www.yogapedia.com/)
+- Following Youtube channels helped a lot in making this project possible:
+  - [The Coding Train](https://www.youtube.com/c/TheCodingTrain)
+  - [Nicholas Renotte](https://www.youtube.com/channel/UCHXa4OpASJEwrHrLeIzw7Yg)
+  - [TensorFlow](https://www.youtube.com/channel/UC0rqucBdTuFTjJiefW5t-IQ)
+  - [Coding Addict](https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA)
+  - [Angela Delise](https://www.youtube.com/channel/UC_TjoSnaI3CTgIgmSn3rruA)
