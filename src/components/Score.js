@@ -9,7 +9,7 @@ const Score = () => {
       {scores.map((score, idx) => {
         return (
           <li key={idx}>
-            {poses[idx].name}: {isDetecting ? score : 0} &nbsp; (Best:{' '}
+            {poses[idx].common_name}: {isDetecting ? score : 0} &nbsp; (Best:{' '}
             {bestScores[idx]})
           </li>
         );

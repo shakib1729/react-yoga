@@ -14,9 +14,9 @@ const PoseList = () => {
                 currPose == pose.id ? 'pose-selected' : ''
               }`}
               src={pose.img}
-              alt={pose.name}
+              alt={pose.common_name}
             />
-            <h4 className='poselist-name'>{pose.name}</h4>
+            <h4 className='poselist-name'>{pose.common_name}</h4>
           </li>
         ))}
       </ul>

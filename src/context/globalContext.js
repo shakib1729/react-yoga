@@ -29,16 +29,19 @@ export const AppProvider = ({ children }) => {
     {
       id: 0,
       name: 'Vrikshasana',
+      common_name: 'Tree Pose',
       img: '/img/tree.png',
     },
     {
       id: 1,
       name: 'Utkatasana',
+      common_name: 'Chair Pose',
       img: '/img/chair.png',
     },
     {
       id: 2,
       name: 'Utthita Tadasana',
+      common_name: 'Star Pose',
       img: '/img/star.png',
     },
   ];

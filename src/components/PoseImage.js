@@ -6,13 +6,14 @@ const PoseImage = () => {
 
   return (
     <div id='sidebar-poseimg'>
-      <h3>
-        {currPose}: {poses[currPose].name}
-      </h3>
+      <h3>{poses[currPose].common_name}</h3>
+      <h4>
+        <i> {poses[currPose].name}</i>
+      </h4>
       <img
         className='big-pose-img'
         src={poses[currPose].img}
-        alt={poses[currPose].name}
+        alt={poses[currPose].common_name}
       />
     </div>
   );
