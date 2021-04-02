@@ -165,7 +165,7 @@ const Main = () => {
       })
     );
     localStorage.setItem('bestScores', JSON.stringify(bestScoresRef.current));
-    setScores([0, 0]);
+    setScores([0, 0, 0]);
   };
 
   const resetStates = () => {

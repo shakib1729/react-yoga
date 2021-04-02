@@ -12,7 +12,7 @@ const getStorageTheme = () => {
 
 const getStorageBestScores = () => {
   const bestScores = localStorage.getItem('bestScores');
-  if (bestScores === null) return [0, 0];
+  if (bestScores === null) return [0, 0, 0];
   return JSON.parse(bestScores);
 };
 
@@ -21,20 +21,25 @@ export const AppProvider = ({ children }) => {
   const [model, setModel] = useState(null);
   const [timer, setTimer] = useState(10);
   const [currPose, setCurrPose] = useState(0);
-  const [scores, setScores] = useState([0, 0]);
+  const [scores, setScores] = useState([0, 0, 0]);
   const [bestScores, setBestScores] = useState(getStorageBestScores());
   const [isDetecting, setIsDetecting] = useState(false);
   const [theme, setTheme] = useState(getStorageTheme());
   const poses = [
     {
       id: 0,
-      name: 'Utkatasana',
-      img: '/img/chair-pose.png',
+      name: 'Vrikshasana',
+      img: '/img/tree.png',
     },
     {
       id: 1,
-      name: 'Vrikshasana',
-      img: '/img/tree-pose.png',
+      name: 'Utkatasana',
+      img: '/img/chair.png',
+    },
+    {
+      id: 2,
+      name: 'Utthita Tadasana',
+      img: '/img/star.png',
     },
   ];
   return (
