@@ -123,6 +123,7 @@ To set up locally, follow these simple steps:
 - Option to toggle between light and dark mode was added
 - Finally deployed using AWS Amplify
   ![image](https://user-images.githubusercontent.com/39847281/113433029-121f1280-93fc-11eb-8b5b-4a18526dfb42.png)
+  ![image](https://user-images.githubusercontent.com/39847281/113433769-6c6ca300-93fd-11eb-9e11-8f379746f254.png)
 
 ## Acknowledgements
 
