@@ -7,7 +7,7 @@ const About = () => {
       <section className='about-container'>
         <div className='neu-card about-text'>
           <ul>
-            <li>React Yoga - Do Yoga divoses better</li>
+            <li>React Yoga - Do Yoga poses better!</li>
             <li>This web app is developed using ReactJS and TensorflowJS</li>
             <li>
               For more info, please visit the&nbsp;
