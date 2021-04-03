@@ -50,6 +50,8 @@ The goal of this project is to classify the yoga poses performed by the user usi
 - Become proficient in performing asanas
 - Toggle between Light and Dark modes
 
+![2021-04-03 13 02](https://user-images.githubusercontent.com/39847281/113472135-839fa500-947e-11eb-8e0c-a38a8f721f6f.jpg)
+
 ### Built With
 
 This web app is developed using React and TensorflowJS
@@ -84,6 +86,8 @@ To set up locally, follow these simple steps:
    ```
 
 ## Development Process
+
+![2021-04-03 12 19](https://user-images.githubusercontent.com/39847281/113472095-489d7180-947e-11eb-92df-6e9359f5c667.jpg)
 
 ### Step 1) Collecting the Dataset
 
@@ -121,9 +125,10 @@ To set up locally, follow these simple steps:
 - User interface was created in React
 - Routing was added to navigate to the about page
 - Option to toggle between light and dark mode was added
+- Stored theme preference and best scores in localStorage
 - Finally deployed using AWS Amplify
   ![image](https://user-images.githubusercontent.com/39847281/113433029-121f1280-93fc-11eb-8b5b-4a18526dfb42.png)
-  ![image](https://user-images.githubusercontent.com/39847281/113433769-6c6ca300-93fd-11eb-9e11-8f379746f254.png)
+  ![image](https://user-images.githubusercontent.com/39847281/113472160-b9dd2480-947e-11eb-9ccd-48c82e3594ae.png)
 
 ## Acknowledgements
 
