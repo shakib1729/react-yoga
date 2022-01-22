@@ -7,7 +7,7 @@
   <p align="center">
     Do Yoga Poses Better!
     <br />
-    Visit:  www.reactyoga.ml
+    Visit:  https://react-yoga.netlify.app
     <br />
     <!-- <a href="/">View Demo</a>
     · -->
@@ -68,7 +68,7 @@ This web app is developed using React and TensorflowJS
 
 ## Usage
 
-The live version of this web app is deployed using AWS Amplify at: https://www.reactyoga.ml
+The live version of this web app is deployed at: https://react-yoga.netlify.app
 <br />
 To set up locally, follow these simple steps:
 
@@ -126,7 +126,6 @@ To set up locally, follow these simple steps:
 - Routing was added to navigate to the about page
 - Option to toggle between light and dark mode was added
 - Stored theme preference and best scores in localStorage
-- Finally deployed using AWS Amplify
   ![image](https://user-images.githubusercontent.com/39847281/113433029-121f1280-93fc-11eb-8b5b-4a18526dfb42.png)
   ![image](https://user-images.githubusercontent.com/39847281/113472160-b9dd2480-947e-11eb-9ccd-48c82e3594ae.png)
 
