@@ -9,10 +9,6 @@
     <br />
     Visit:  https://react-yoga.netlify.app
     <br />
-    or
-    <br />
-     &nbsp;&nbsp;&nbsp;https://www.reactyoga.ml
-    <br />
     <br />
     <!-- <a href="/">View Demo</a>
     · -->
